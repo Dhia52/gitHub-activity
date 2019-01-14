@@ -1,9 +1,7 @@
-let button = document.getELementById("button");
-let body = document.querySelector("body");
-
-//Turns text color to green on whole document
-button.addEventListener(function(){ 
-	body.style.color = "green";
-	//Button disappears
-	button.style.display = "none";
+$(function(){
+	$('#button').on('click', function(){
+		$('body').css('color', 'green');
+		$('p:eq(0)').html("T'as vu ? Tout le texte est coloré en vert maintenant !");
+		$('#button').hide();
+	});
 });
